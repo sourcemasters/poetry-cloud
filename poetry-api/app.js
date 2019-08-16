@@ -9,7 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const testAPIRouter = require('./routes/testAPI');
 // const getRandomPoem = require('./routes/getRandomPoem');
-// const insertPoem = require('./routes/insertPoem');
+const insertPoem = require('./routes/insertPoem');
 const app = express();
 
 // view engine setup
@@ -27,7 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/testAPI', testAPIRouter);
 // app.use('/getpoem', getRandomPoem);
-// app.use('/insertpoem', insertPoem);
+app.use('/insertpoem', insertPoem);
 const router = express.Router();
 
 // router.get('/getpoem', (req, res, next) => {
